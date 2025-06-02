@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elia Salvadore | Pianist Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap');
+
+    :root {
+      --bg-color: #e5e5cc;
+      --text-color: #2d2d1d;
+      --accent-color: #556b2f;
+      --button-color: #6b8e23;
+      --button-hover: #4b6b1d;
+    }
+
+    .light-theme {
+      --bg-color: #0d1b2a;
+      --text-color: #fdfdfd;
+      --accent-color: #ff6700;
+      --button-color: #ff6700;
+      --button-hover: #cc5500;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.4s, color 0.4s;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 30px;
+    }
+    header, footer {
+      background-color: var(--accent-color);
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: var(--bg-color);
+    }
+    h2 {
+      font-size: 2em;
+      padding: 15px 0 10px;
+      border-left: 5px solid var(--button-color);
+      padding-left: 15px;
+      margin-bottom: 25px;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 6px;
+      color: var(--text-color);
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    ul {
+      padding-left: 30px;
+      list-style: none;
+      font-family: 'Inter', sans-serif;
+      line-height: 2.2;
+    }
+    ul li::before {
+      content: "\2192  ";
+      color: var(--button-color);
+      font-weight: bold;
+      margin-right: 5px;
+    }
+    p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1em;
+      line-height: 2;
+      margin-bottom: 20px;
+    }
+    a {
+      color: var(--button-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight {
+      font-weight: 600;
+    }
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      margin: 40px 0;
+      border-radius: 12px;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 15s infinite;
+    }
+    .slides img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+    .button {
+      background-color: var(--button-color);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 30px;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-right: 12px;
+      transition: background-color 0.3s, transform 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .button:hover {
+      background-color: var(--button-hover);
+      transform: scale(1.05);
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      z-index: 1000;
+    }
+    .theme-toggle:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">🎨 Toggle Theme</button>
+  <header>
+    <h1>Elia Salvadore</h1>
+    <p>Classical Pianist | International Performer | ABRSM Diploma Holder</p>
+  </header>
+
+  <div class="container">
+    <div class="slider">
+      <div class="slides">
+        <img src="performance1.jpg" alt="Performance 1">
+        <img src="performance2.jpg" alt="Performance 2">
+        <img src="performance3.jpg" alt="Performance 3">
+      </div>
+    </div>
+
+    <section>
+      <h2>About Me</h2>
+      <p>I am a young, self-driven classical pianist, with a deep passion for Beethoven and Bach. In addition to music, I enjoy languages and academics. I am fluent in Italian and English, and have performed internationally across Europe and the Middle East.</p>
+    </section>
+
+    <section>
+      <h2>Performance Exams (ABRSM)</h2>
+      <ul>
+        <li>Grade 8: 140/150 – Distinction (2024)</li>
+        <li>Grade 7: 133/150 – Distinction (2023)</li>
+        <li>Grade 6: 135/150 – Distinction (2022)</li>
+        <li>Grade 5: 134/150 – Distinction (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Concert Performances</h2>
+      <ul>
+        <li>2024: Scuola di Musica MC Performance – Dec 15 (Rachmaninoff Prelude Op.3 No.2)</li>
+        <li>2023: AUS 25-Year Jubilee – Mar 20 (Chopin Nocturne Op.72 No.1)</li>
+        <li>2023: AUS Children’s Concert – May 14 (Fucik & Norton)</li>
+        <li>2023: BIS Abu Dhabi Awards – Jun 19 (Norton: New Kid)</li>
+        <li>2016: AUS Concert – Alla Turka (Mozart)</li>
+        <li>2024: Dubai Literature Festival – Feb 2 (Parrino: Under the Sea)</li>
+        <li>2021: Sharjah English School Pantomime – Lead Pianist</li>
+        <li>2023: BISAD Pantomime – Lead/Base Pianist</li>
+      </ul>
+      <a class="button" href="https://www.youtube.com/channel/UC1BZ6oAKsblJx_IrW6pDVRg" target="_blank">🎥 Watch Performances</a>
+    </section>
+
+    <section>
+      <h2>Awards</h2>
+      <ul>
+        <li>Fiestalonia Talents of Europe – First Place (2020)</li>
+        <li>Four Notes Competition – 7th Overall, First Place Category (2024)</li>
+        <li>Young Musicians ME – Honorable Mention (Dec 2023)</li>
+        <li>Middle East Talented Musicians – Beethoven Op. 79 (Jan 2024)</li>
+        <li>Fujairah Int'l Competition – Rachmaninoff & Beethoven (Feb 2024)</li>
+        <li>Steinway GCC 2025 – Round 2 (Top 15 by Jury)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Repertoire</h2>
+      <ul>
+        <li>Polichinelle in F# Minor – Rachmaninoff</li>
+        <li>Prelude Op.3 No.2 – Rachmaninoff</li>
+        <li>Sonata Op. 13 "Pathetique" – Beethoven</li>
+        <li>Prelude and Fugue No. 6 – J.S. Bach</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p><span class="highlight">Email:</span> <a href="mailto:salvadoreelia512@gmail.com">salvadoreelia512@gmail.com</a></p>
+      <p><span class="highlight">Phone:</span> +39 338 582 9645</p>
+      <a class="button" href="https://wa.me/393385829645" target="_blank">📨 Send a Message</a>
+      <a class="button" href="https://calendly.com/salvadoreelia2024/30min" target="_blank">📅 Book a Meeting</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Elia Salvadore | Classical Piano Portfolio</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+  </script>
+</body>
+</html>
